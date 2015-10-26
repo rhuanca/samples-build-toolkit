@@ -3,6 +3,9 @@ ADD ./ti-sdk-omapl138-lcdk-01.00.00 /root/ti-sdk-omapl138-lcdk-01.00.00
 ADD ./samples /root/samples
 
 # setup omapl138 devkit
+COPY Rules.make /root/ti-sdk-omapl138-lcdk-01.00.00/Rules.make
+COPY environment-setup /root/ti-sdk-omapl138-lcdk-01.00.00/linux-devkit/environment-setup
+
 RUN echo "export TI_SDK_PATH=/root/ti-sdk-omapl138-lcdk-01.00.00" >> /root/.bashrc
 RUN echo "source /root/ti-sdk-omapl138-lcdk-01.00.00/linux-devkit/environment-setup" >> /root/.bashrc
 
