@@ -1,0 +1,17 @@
+# pull and run toolkit
+docker pull rhuanca/toolkit2
+docker run -d -p 9022:22 rhuanca/toolkit2 // I'm not sure if this is the correct syntaxis but, they are the right parameters
+
+# to connect to the container.
+ssh -p 9022 root@IP_ADDRESS
+(password root123)
+
+# to compile hello world
+cd /root/samples/c_hello_world/
+cc hello-microstar.c -o hello
+# it will generate a hello executable that can be copied to the microstart
+
+# to compile read tag ids
+cd /root/samples/read_tag_ids/
+> cmake .; make
+# it will generate a read_tag_ids that can be copied to the microstart
